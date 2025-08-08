@@ -6,8 +6,8 @@ const urlsToCache = [
     '/app.js',
     '/manifest.json',
     // You would add your icons here, for example:
-    // '/icons/icon-192x192.png',
-    // '/icons/icon-512x512.png',
+    '/icons/icon-192x192.png',
+     '/icons/icon-512x512.png',
     // etc.
 ];
 
