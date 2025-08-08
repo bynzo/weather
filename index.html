@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,13 +22,44 @@
                 <input type="text" id="search-input" placeholder="Search for a city..." autocomplete="off">
                 <button type="submit">Search</button>
             </form>
+            
+            <div class="settings-and-saved">
+                <div class="saved-locations-container">
+                    <label for="saved-locations-select">Saved:</label>
+                    <select id="saved-locations-select">
+                        <option value="">Select a location</option>
+                    </select>
+                </div>
+
+                <div class="settings-toggles">
+                    <div class="toggle-container">
+                        <label for="theme-toggle">☀️</label>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="theme-toggle">🌙</label>
+                    </div>
+                    <div class="toggle-container">
+                        <label for="units-toggle">°C</label>
+                        <label class="switch">
+                            <input type="checkbox" id="units-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="units-toggle">°F</label>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <section class="weather-card">
             <div id="loading-spinner" class="loading-spinner"></div>
             <div id="weather-info" class="hidden">
                 <div class="location-info">
-                    <h1 id="city-name"></h1>
+                    <div class="city-header">
+                        <h1 id="city-name"></h1>
+                        <button id="save-location-btn" title="Save Location">☆</button>
+                    </div>
                     <p id="date"></p>
                 </div>
                 <div class="main-weather">
@@ -49,7 +79,7 @@
                 </div>
             </div>
             <div id="offline-message" class="offline-message hidden">
-                <p>You are offline. Displaying cached data.</p>
+                <p>You are offline. Displaying last saved data.</p>
             </div>
             <div id="error-message" class="error-message hidden">
                 <p>Could not fetch weather data. Please try again.</p>
