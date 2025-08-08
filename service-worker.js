@@ -2,7 +2,7 @@ const CACHE_NAME = 'weather-pwa-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/style.css',
+    '/styles.css',
     '/app.js',
     '/manifest.json',
     // You would add your icons here, for example:

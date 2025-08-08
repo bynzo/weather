@@ -1,5 +1,5 @@
-const API_KEY = 'edcafc8a574dc6c95d7ea997c8c0e37f'; // Replace with your OpenWeatherMap API key
-const BASE_URL = 'https://api.openweathermap.org/data/2.5';
+const API_KEY = '3c3617c6d920dfb72f8d310a95f9d07d'; // Replace with your OpenWeatherMap API key
+const BASE_URL = 'https://api.openweathermap.org/data/3.0';
 
 // DOM elements
 const searchForm = document.getElementById('search-form');
