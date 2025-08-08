@@ -1,0 +1,62 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather PWA</title>
+    <meta name="theme-color" content="#2c3e50"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <main class="app-container">
+        <header>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for a city..." autocomplete="off">
+                <button type="submit">Search</button>
+            </form>
+        </header>
+
+        <section class="weather-card">
+            <div id="loading-spinner" class="loading-spinner"></div>
+            <div id="weather-info" class="hidden">
+                <div class="location-info">
+                    <h1 id="city-name"></h1>
+                    <p id="date"></p>
+                </div>
+                <div class="main-weather">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <p id="temperature"></p>
+                </div>
+                <p id="description"></p>
+                <div class="details">
+                    <div class="detail-item">
+                        <span class="detail-label">Humidity</span>
+                        <span id="humidity-value" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wind Speed</span>
+                        <span id="wind-speed-value" class="detail-value"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="offline-message" class="offline-message hidden">
+                <p>You are offline. Displaying cached data.</p>
+            </div>
+            <div id="error-message" class="error-message hidden">
+                <p>Could not fetch weather data. Please try again.</p>
+            </div>
+        </section>
+    </main>
+    <div id="background-overlay"></div>
+
+</body>
+</html>
